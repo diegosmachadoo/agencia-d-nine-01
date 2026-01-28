@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNINE | Performance para Salões AAA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="img/logosemfundo.png" alt="DNINE Logo" class="main-logo">
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#metodo">Método</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container" data-aos="fade-up">
+            <h1>Escalamos o faturamento do seu salão com <span class="blue">estratégia e dados.</span></h1>
+            <p class="hero-subhead">Transformamos cliques em cadeiras cheias através de um método previsível.</p>
+            <div class="hero-cta-wrapper">
+                <a href="#contato" class="btn-zoom">Quero Crescer Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title title-margin">Nossos Serviços</h2>
+            <div class="grid-servicos">
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><h3>Tráfego Pago</h3></div>
+                        <div class="flip-card-back"><p>Anúncios diretos para o público de luxo.</p></div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><h3>Sites Premium</h3></div>
+                        <div class="flip-card-back"><p>Páginas de alta conversão.</p></div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><h3>Social Ads</h3></div>
+                        <div class="flip-card-back"><p>Estratégia visual para gerar desejo.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodo" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title title-margin">Como Trabalhamos</h2>
+            <div class="passos">
+                <div class="passo glow-card" data-aos="fade-up">
+                    <span>01.</span>
+                    <h4>Análise</h4>
+                    <p>Entendemos seu momento atual e objetivos de lucro.</p>
+                </div>
+                <div class="passo glow-card" data-aos="fade-up" data-aos-delay="100">
+                    <span>02.</span>
+                    <h4>Execução</h4>
+                    <p>Implementação ágil das campanhas de performance.</p>
+                </div>
+                <div class="passo glow-card" data-aos="fade-up" data-aos-delay="200">
+                    <span>03.</span>
+                    <h4>Otimização</h4>
+                    <p>Ajuste diário focado no retorno sobre investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-spacing">
+        <div class="container">
+            <h2 class="section-title center-text title-margin">Framework D9</h2>
+            <div class="grid-d9" id="d9-container"></div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title title-margin">O que nossos clientes dizem</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track" id="depo-track"></div>
+        </div>
+    </section>
+
+    <section class="section-spacing bg-alt">
+        <div class="container center-content">
+            <h2 class="section-title center-text title-margin">Por que escolher a DNINE?</h2>
+            <div class="porque-list-centered">
+                <p class="zoom-text">• Especialistas no Mercado de Beleza</p>
+                <p class="zoom-text">• Metodologia Própria e Comprovada</p>
+                <p class="zoom-text">• Foco em Lucro, não em Curtidas</p>
+                <p class="zoom-text">• Relatórios de Dados em Tempo Real</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-spacing cta-final">
+        <div class="container center-content">
+            <h1 class="h1-small" data-aos="fade-up">O SEU SALÃO É O PRÓXIMO <br> CASE DE SUCESSO?</h1>
+            <div class="btn-wrap" style="margin-top: 50px;">
+                <button class="btn-explode-whatsapp smaller-btn">
+                    <span class="btn-text">SOLICITAR ANÁLISE AGORA</span>
+                    <i class="fab fa-whatsapp whatsapp-icon"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-nav-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#metodo">Método</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h4>Contato</h4>
+                <p class="footer-email">contato@dnine.com.br</p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/seuperfil" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brand-central">
+            <img src="img/logosemfundo.png" alt="DNINE Logo" class="footer-logo-centered">
+            <div class="footer-bottom-info">
+                <p>&copy; 2026 DNINE Performance Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
