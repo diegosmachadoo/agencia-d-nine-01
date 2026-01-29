@@ -1,6 +1,5 @@
 AOS.init({ duration: 1000, once: true });
 
-// Dados dos 8 Reviews (6 originais + 2 novos)
 const depoimentos = [
     { nome: "Studio Essence", local: "São Paulo, SP", texto: "A Dnine trouxe clareza estratégica e um padrão de execução muito acima do que já tínhamos visto." },
     { nome: "Belle Prime", local: "Campinas, SP", texto: "O posicionamento mudou completamente. O site e a estratégia passaram a transmitir valor real." },
@@ -21,14 +20,13 @@ depoTrack.innerHTML = listaDuplicada.map(d => `
             <h4 style="color: #2563eb; font-weight: 900;">${d.nome}</h4>
             <small style="color: #94a3b8; display: block; margin-bottom: 10px;">${d.local}</small>
         </div>
-        <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 15px;">“${d.texto}”</p>
+        <p style="font-style: italic; font-size: 0.9rem; margin-bottom: 15px; color: #e2e8f0;">“${d.texto}”</p>
         <div style="color:#fbbf24; font-size:0.7rem">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
     </div>
 `).join('');
 
-// Função do Botão WhatsApp
 document.querySelector('.btn-whatsapp').addEventListener('click', () => {
-    window.open('https://wa.me/55SEUNUMERO', '_blank'); // Troque pelo seu número
+    window.open('https://wa.me/55SEUNUMERO', '_blank'); // ADICIONE SEU NÚMERO AQUI
 });
