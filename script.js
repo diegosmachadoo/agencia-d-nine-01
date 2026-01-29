@@ -1,28 +1,14 @@
-// AOS - Animações de Scroll
 AOS.init({ duration: 1000, once: true });
 
-// HEADER INTELIGENTE (SUMIR/APARECER)
+// Header Inteligente
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
-
 window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 150) {
-        header.classList.add('navbar--hidden');
-    } else {
-        header.classList.remove('navbar--hidden');
-    }
+    window.scrollY > lastScrollY ? header.classList.add('navbar--hidden') : header.classList.remove('navbar--hidden');
     lastScrollY = window.scrollY;
 });
 
-// FRAMEWORK D9
-const d9Data = ["Diagnóstico", "Direcionamento", "Design", "Desenvolvimento", "Distribuição", "Domínio", "Decisão", "Dobrar Resultados", "Diferenciação"];
-const d9Container = document.getElementById('d9-container');
-d9Data.forEach((d, i) => {
-    d9Container.innerHTML += `<div class="item-d9" data-aos="zoom-in"><strong>D${i+1}</strong><br>${d}</div>`;
-});
-
-// SLIDER DE DEPOIMENTOS
-// CONFIGURAÇÃO DOS DEPOIMENTOS REAIS
+// Render Depoimentos Reais
 const depoimentos = [
     { nome: "Studio Essence", local: "São Paulo, SP", texto: "A Dnine trouxe clareza estratégica e um padrão de execução muito acima do que já tínhamos visto. Hoje o marketing é previsível e orientado a dados." },
     { nome: "Belle Prime", local: "Campinas, SP", texto: "O posicionamento mudou completamente. O site, os anúncios e a estratégia passaram a transmitir valor real, e isso refletiu direto no faturamento." },
@@ -33,32 +19,21 @@ const depoimentos = [
 ];
 
 const depoTrack = document.getElementById('depo-track');
-
-// Função para criar o HTML dos cards
-function renderDepoimentos() {
-    // Duplicamos a lista para o efeito de scroll infinito não ter "buracos"
-    const listaDuplicada = [...depoimentos, ...depoimentos];
-    
-    depoTrack.innerHTML = listaDuplicada.map(depo => `
-        <div class="depo-card">
-            <div class="depo-header">
-                <h4 class="blue">${depo.nome}</h4>
-                <small>${depo.local}</small>
-            </div>
-            <p class="depo-text">“${depo.texto}”</p>
-            <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+const listaDuplicada = [...depoimentos, ...depoimentos];
+depoTrack.innerHTML = listaDuplicada.map(d => `
+    <div class="depo-card">
+        <div class="depo-header">
+            <h4>${d.nome}</h4>
+            <small>${d.local}</small>
         </div>
-    `).join('');
-}
+        <p class="depo-text">“${d.texto}”</p>
+        <div style="color:#fbbf24; font-size:0.8rem">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+    </div>
+`).join('');
 
-renderDepoimentos();
-`;
-depoTrack.innerHTML = depoContent.repeat(10);
-
-// WHATSAPP REDIRECT
-document.querySelector('.smaller-btn').addEventListener('click', () => {
-    window.open('https://wa.me/5500000000000', '_blank'); // Troque pelo seu número
-
+// WhatsApp
+document.querySelector('.btn-whatsapp').addEventListener('click', () => {
+    window.open('https://wa.me/55SEUNUMERO', '_blank');
 });
