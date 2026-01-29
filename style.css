@@ -69,11 +69,56 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--whi
 .item-d9:hover { background: var(--blue); transform: translateY(-10px); }
 
 /* DEPOIMENTOS */
-.slider-container { overflow: hidden; padding: 20px 0; }
-.slider-track { display: flex; gap: 30px; animation: scrollDepo 40s linear infinite; width: max-content; }
-.depo-card { width: 320px; background: var(--dark-card); border: 1px solid var(--border); padding: 30px; border-radius: 8px; flex-shrink: 0; }
-@keyframes scrollDepo { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+/* AJUSTE DOS CARDS DE DEPOIMENTO */
+.depo-card {
+    width: 350px;
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
 
+.depo-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+}
+
+.depo-header h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.depo-header small {
+    color: var(--gray);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.depo-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #fbbf24; /* Cor dourada para as estrelas */
+    font-size: 0.9rem;
+}
+
+/* Scroll infinito mais suave */
+.slider-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollDepo 50s linear infinite; /* Aumentei o tempo para facilitar a leitura */
+    width: max-content;
+}
 /* SESSÃO 6 - ZOOM AZUL */
 .zoom-text { font-size: clamp(1.1rem, 4vw, 1.5rem); font-weight: 700; margin: 20px 0; color: var(--gray); transition: 0.4s; }
 .zoom-text:hover { color: var(--blue); transform: scale(1.15); text-shadow: 0 0 15px rgba(37, 99, 235, 0.4); }
@@ -108,4 +153,5 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--whi
     .footer-grid { grid-template-columns: 1fr; }
     .footer-logo-centered { height: 70px; }
     .smaller-btn { width: 100%; }
+
 }
